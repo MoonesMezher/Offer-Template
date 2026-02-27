@@ -1,0 +1,744 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    opacity: 0.95;
+}
+
+/* Sections */
+section {
+    padding: 50px 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+}
+
+.benefit-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    color: #667eea;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 1em;
+}
+
+/* Features */
+.feature-category {
+    margin-bottom: 40px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 5px solid #667eea;
+}
+
+.category-title {
+    font-size: 1.6em;
+    color: #764ba2;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    padding-right: 0;
+}
+
+.feature-list li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Pricing */
+.pricing {
+    background: #f5f7fa;
+}
+
+.pricing-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 6px solid;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.option-1 {
+    border-top-color: #667eea;
+}
+
+.option-2 {
+    border-top-color: #764ba2;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing-icon {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.pricing-header h3 {
+    font-size: 1.8em;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.pricing-name {
+    font-size: 1.3em;
+    color: #764ba2;
+    font-weight: 600;
+}
+
+.pricing-description {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.pricing-description p {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.pricing-features {
+    list-style: none;
+    padding-right: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 12px 0 12px 35px;
+    position: relative;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.pricing-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+}
+
+.pricing-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+}
+
+.pricing-btn:active {
+    transform: scale(0.98);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-section .section-title {
+    color: white;
+}
+
+.cta-section .section-title::after {
+    background: white;
+}
+
+.cta-description {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 18px 40px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: #667eea;
+}
+
+.cta-btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Revenue Section */
+.revenue {
+    background: #f5f7fa;
+    opacity: 1 !important;
+}
+
+.revenue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.revenue-card {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #667eea;
+}
+
+.revenue-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+}
+
+.revenue-icon {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.revenue-card h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.revenue-percentage {
+    font-size: 2em;
+    color: #764ba2;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.revenue-description {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.revenue-examples {
+    list-style: none;
+    padding-right: 0;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.revenue-examples li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.revenue-examples li::before {
+    content: '•';
+    position: absolute;
+    right: 0;
+    color: #667eea;
+    font-size: 1.5em;
+}
+
+.revenue-example {
+    margin-top: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.revenue-calculation {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border-right: 4px solid #667eea;
+}
+
+.calc-label {
+    color: #555;
+    font-size: 1.1em;
+    flex: 1;
+}
+
+.calc-value {
+    color: #667eea;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.calc-total {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 25px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.calc-total .calc-label {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.calc-total .calc-value {
+    color: white;
+    font-size: 2em;
+}
+
+/* Pricing Amount */
+.pricing-amount {
+    text-align: center;
+    margin: 30px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+}
+
+.price-tag {
+    font-size: 3em;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Alternative Deployment */
+.alternative-deployment {
+    margin-top: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 2px dashed #667eea;
+}
+
+/* Technologies */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-category {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.tech-category h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tech-category ul {
+    list-style: none;
+    padding-right: 0;
+}
+
+.tech-category li {
+    padding: 10px 0;
+    color: #555;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.tech-category li:last-child {
+    border-bottom: none;
+}
+
+.tech-category strong {
+    color: #764ba2;
+}
+
+/* Design */
+.design-list {
+    list-style: none;
+    padding-right: 0;
+    margin-top: 30px;
+}
+
+.design-list li {
+    padding: 15px 0 15px 40px;
+    position: relative;
+    color: #555;
+    font-size: 1.1em;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.design-list li::before {
+    content: '🎨';
+    position: absolute;
+    right: 0;
+    font-size: 1.3em;
+}
+
+/* Costs Table */
+.costs-table {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: right;
+}
+
+th {
+    font-size: 1.1em;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+    background: #f5f7fa;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border-right: 4px solid #ffc107;
+    border-radius: 5px;
+    color: #856404;
+}
+
+
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 40px;
+}
+
+.footer-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin: 30px 0;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.footer-note {
+    margin-top: 30px;
+    font-size: 0.95em;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .header {
+        padding: 40px 20px;
+    }
+
+    .main-title {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-options {
+        grid-template-columns: 1fr;
+    }
+
+    .revenue-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .calc-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .calc-value {
+        margin-right: 0;
+    }
+
+    .price-tag {
+        font-size: 2.5em;
+    }
+
+    .revenue-percentage {
+        font-size: 1.8em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .pricing-btn, .cta-btn {
+        display: none;
+    }
+}
+
+li {
+    padding: 1rem 2rem 1rem !important;
+}
